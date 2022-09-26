@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="leftPane" id="leftPane">
+      <button class="newNoteBtn" id="newNoteBtn">New Note</button>
+      <div class="separateLine"></div>
+      <div class="notesArea" id="notesArea">
+        <!--         <div class="note" id="note">#Note 1</div> -->
+      </div>
+    </div>
+
+    <div class="rightPane">
+      <div class="topIcons">
+        <button type="button" onclick="document.getElementById('noteText').style.fontWeight = 700" class="boldIcon"
+          id="boldIconBtn">
+
+          <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M51.3428 35.4626C57.8606 37.905 62.5 44.192 62.5 51.5625C62.5 61.0549 54.8049 68.75 45.3125 68.75H18.75V6.25H39.0625C48.5549 6.25 56.25 13.9451 56.25 23.4375C56.25 28.1188 54.3785 32.363 51.3428 35.4626ZM39.0625 34.375C45.1031 34.375 50 29.4781 50 23.4375C50 17.3969 45.1031 12.5 39.0625 12.5H25V34.375H39.0625ZM25 62.5V40.625H45.3125C51.3531 40.625 56.25 45.5219 56.25 51.5625C56.25 57.6031 51.3531 62.5 45.3125 62.5H25Z"
+              fill="black" />
+          </svg>
+        </button>
+        <button type="button" onclick="document.getElementById('noteText').style.fontStyle = 'italic' "
+          class="italicsIcon" id="italicsIconBtn">
+          <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M46.2568 12.5L35.1457 62.5H46.875V68.75H17.1875V62.5H28.7432L39.8543 12.5H29.6875V6.25H59.375V12.5H46.2568Z"
+              fill="black" />
+          </svg>
+
+        </button>
+        <button type="button" onclick="document.getElementById('noteText').style.textDecoration = 'underline' "
+          class="underlineIcon" id="underlineIconBtn">
+          <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M59.375 6.25H53.125V34.375C53.125 44.7303 47.8553 50 37.5 50C27.1447 50 21.875 44.7303 21.875 34.375V6.25H15.625V34.375C15.625 48.1821 23.6929 56.25 37.5 56.25C51.3071 56.25 59.375 48.1821 59.375 34.375V6.25ZM12.5 62.5V68.75H62.5V62.5H12.5Z"
+              fill="black" />
+          </svg>
+
+        </button>
+      </div>
+      <textarea type="text" id="noteText" class="noteText hide" placeholder="Type your content here..."></textarea>
+
+      <div class="bottomIcons">
+
+        <button onclick={copyContent} class="copyIcon" id="copyBtn">
+          <svg width="50" height="50" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M35.8333 7.16669H71.6666C75.7956 7.16669 78.8333 10.2043 78.8333 14.3334V50.1667C78.8333 54.2957 75.7956 57.3334 71.6666 57.3334H57.3333V71.6667C57.3333 75.7957 54.2956 78.8334 50.1666 78.8334H14.3333C10.2043 78.8334 7.16663 75.7957 7.16663 71.6667V35.8334C7.16663 31.7043 10.2043 28.6667 14.3333 28.6667H28.6666V14.3334C28.6666 10.2043 31.7043 7.16669 35.8333 7.16669ZM28.6666 35.8334H14.3333V71.6667H50.1666V57.3334H35.8333C31.7043 57.3334 28.6666 54.2957 28.6666 50.1bottom667V35.8334ZM35.8333 14.3334V50.1667H71.6666V14.3334H35.8333Z"
+              fill="black" />
+          </svg>
+
+        </button>
+        <button type="button" onclick="saveContent()" id="saveBtn" class="saveBtn">Save</button>
+      </div>
+    </div>
+  </div>>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>

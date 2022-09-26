@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+
+::selection{
+  background: #A193AE;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.leftPane {
+  width: 25%;
+  height: 100vh;
+  background: #C9B1B1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newNoteBtn {
+  width: 60%;
+  height: 40px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  background: #A84CAA;
+  border-radius: 13px;
+
+  color: white;
+  font-size: 100%;
+}
+
+.newNoteBtn:hover {
+  background: #980e9a;
+}
+
+.separateLine {
+  width: 100%;
+  height: 5px;
+  background-color: black;
+}
+
+.topIcons {
+  display: flex;
+  height: 102px;
+  width: 75vw;
+  background: #F3F3F3;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.boldIcon, .underlineIcon, .italicsIcon{
+  cursor: pointer;
+}
+
+
+@keyframes wobble-vertical {
+  16.65% {
+    transform: translateY(8px);
+  }
+  33.3% {
+    transform: translateY(-6px);
+  }
+  49.95% {
+    transform: translateY(4px);
+  }
+  66.6% {
+    transform: translateY(-2px);
+  }
+  83.25% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.boldIcon:hover, .underlineIcon:hover, .italicsIcon:hover {
+  animation-name: wobble-vertical;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+textarea {
+  width: 90%;
+  height: 60%;
+  border: transparent;
+  padding: 20px;
+  overflow: auto;
+  font-size: 18px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.bottomIcons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+
+.copyIcon{
+  cursor: pointer;
+}
+
+.saveBtn{
+  padding:0.8rem;
+  border-radius:5px;
+  background-color: green;
+  border: green;
+  color:white;
+  cursor: pointer;
+  animation: 0.5s ease-in 1.5s 2 shake;
+}
+
+
+.saveBtn:hover{
+  animation: 0.5s infinite shake;
+  background-color: darkgreen;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.boldIcon, .italicsIcon, .underlineIcon, .copyIcon {
+  border: none;
+}
+
+.boldIcon:hover, .italicsIcon:hover, .underlineIcon:hover, .copyIcon:hover{
+  background: #a29a9a;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.notesArea {
+  width: 100%;
+}
+
+.note {
+  background: #C88F8F;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.note:hover {
+  background: #928181;
+  cursor: pointer;
+}
+
+.highlight {
+  background: #928181;
+}
